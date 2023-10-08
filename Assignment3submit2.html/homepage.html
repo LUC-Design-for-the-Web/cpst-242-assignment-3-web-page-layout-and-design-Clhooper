@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Three Tarts Bakery</title>
+        <link rel="stylesheet" href='/Assignment3submit2.css/style.css'>
+        <meta charset="UTF-8">
+        <meta name="description" content="bakery, Three Tarts Bakery, three, tarts, bakery, northshore bakery, local bakery, cake, custom cake">
+        <meta name="keywords" content="sitemap, wireframe">
+        <meta name="author" content="Claire Hooper">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+             #containerhomepage{
+                width: 100%;
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                grid-template-rows: 130px auto auto 200% auto auto auto 15%;
+                grid-template-areas: "head head head"
+                                    "open open open"
+                                    "open open open"
+                                    "soup soup soup"
+                                    "week week week"
+                                    "employ employ employ"
+                                    "close close close"
+                                    "foot foot foot";
+                }
+
+            header{
+                grid-area: head;
+                }
+            #openingimage{
+                grid-area: open;
+                background-color: #A4C4AD;
+            }
+
+            #openingimage img{
+                width: 100%;
+                margin: auto;
+            }
+
+            #dailysoupspecialsscroll{
+                background-color: #A4C4AD;
+                grid-area: soup;
+                text-align: center;
+            }
+            #dailysoupspecialsscrollboxes{
+                display: flex;
+                justify-content: flex-start;
+                align-items: center; 
+                overflow-x: auto;
+                overflow-y: hidden;
+                white-space: nowrap;
+                scrollbar-width: none;
+            
+                width: 100%;
+            }
+            .soup1{ 
+                text-align: center;
+                display: flex;
+                flex-direction: column;
+                width: 40%;
+                font-size: 16px;
+
+            }
+
+            .soup2{
+                text-align: center;
+                display: flex;
+                flex-direction: column;
+                margin-top: 17px;
+                margin-left: 10px;
+                width: 40%;
+                font-size: 16px;
+                
+                
+            }
+
+            
+
+            #soup{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-top: 5%; 
+            }
+            
+
+
+
+            
+                
+
+
+            
+            #dailysoupspecialsscrollboxes h5{
+                text-align: center;
+                margin-top:30px;
+                
+            }
+
+            #dailysoupspecialsscroll h1{
+                padding-top: 20%;
+                padding-bottom: 7%;
+
+                
+            }
+
+            #dailysoupspecialsscrollboxes li{
+                width: 450px;
+                height: 450px;
+                display: inline-block;
+                flex: 1 0 325;
+                background-color: #508C66;
+                color: white;
+                border-radius: 25px;
+                margin-top: 10px;
+                text-align: center;
+                
+            }
+
+            #weeklyspecials{
+                grid-area: week;
+                background-color: #A4C4AD;
+                text-align: center;
+                
+            }
+
+            #weeklyspecials h1{
+                padding-top: 10%;
+                padding-bottom: 7%;
+            }
+
+            #weeklyspecialsboxes{
+                display: flex;
+                justify-content: flex-start;
+                align-items: center; 
+                overflow-x: auto;
+                overflow-y: hidden;
+                white-space: nowrap;
+                scrollbar-width: none;
+                
+                
+            }
+
+
+            
+
+
+            #weeklyspecials li{
+                width: 350px;
+                height: 400px;
+                display: inline-block;
+                text-align: center;
+                background-color: #508C66;
+                border-radius: 25px;
+                
+
+            }
+
+            #savoryspinach:hover{
+                background-image: url(/Assignment3submit2.img/savorysconepexels-craig-adderley-1634059homepage.jpg);
+            }
+
+
+
+            #savorybacon:hover{
+                background-image: url(/Assignment3submit2.img/baconcheddarchivesavorysconehomepage.png);
+            }
+
+            #quiche:hover{
+                background-image: url(/Assignment3submit2.img/Quichehomepage.png);
+            }
+
+            #danish:hover{
+                background-image: url(/Assignment3submit2.img/pecandanishhomepage.png);
+            }
+
+            #miniscone:hover{
+                background-image: url(/Assignment3submit2.img/Peachgingersconeshomepage.png);
+            }
+
+            #MichiganBlueberry:hover{
+                background-image: url(/Assignment3submit2.img/MichiganBlueberrypiehomepage.png);
+            }
+
+            #annapple:hover{
+                background-image: url(/Assignment3submit2.img/Anns\ applehomepage.png);
+            }
+
+            #applecrumb:hover{
+                background-image: url(/Assignment3submit2.img/applecrumbpiehomepage.png)
+            }
+
+            
+            
+
+
+
+            #weeklyspecialsboxes li h5{
+                padding-top: 15%;
+                color: white;
+            }
+
+            #weeklyspecialsboxes li p{
+                display: flex;
+                justify-content: center;
+                align-content: center;
+                padding-top: 30%;
+                padding-left: 5%;
+                padding-right: 5%;
+                color: white;
+
+            
+            
+            }
+
+
+            #employmentbutton{
+                background-color: #A4C4AD;
+                grid-area: employ;
+            text-align: center;
+            padding-top: 20%;
+            padding-bottom: 20%;
+            }
+            #employmentbutton h1{
+                padding-top: 5%;
+                padding-bottom: 1%;
+            }
+
+            #employmentbutton button{
+                background-color: #508C66;
+                color: white;
+                font-size: 16px;
+                padding: 15px 32px;
+                border-radius: 25px;
+            }
+
+            #employmentbutton button:hover{
+                background-color: white;
+                color:#508C66;
+            }
+
+            #closingphoto{
+                background-color: #A4C4AD;
+                grid-area: close;
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                align-content: center;
+
+            }
+            #closingphoto img{
+                width: 80%;
+                max-height: fit-content;
+                margin-bottom: -.8%;
+            }
+            footer{
+   
+                grid-area: foot;
+            }
+
+        </style>
+
+    </head>
+    <body>
+        <div id="containerhomepage">
+            <header>
+               <div id="nav">
+                    <a href="#menu">Menu</a><!--not completed yet but look at weekly specials to see the concept for squares-->
+               </div>
+               <div id="nav-logo">
+                    <a href="/Assignment3submit2.html/homepage.html"><img src="/Assignment3submit2.img/Threetartslogo.png"></a>
+               </div>
+               <div id="nav-right">
+                    <a href="#cakeorder">Cake Order</a><!--almost finished just getting everything formated, for now this link goes nowhere-->
+               </div>
+
+            </header>
+            <div id="openingimage">
+                <img src="/Assignment3submit2.img/9+-+Apple+Pie+(2).JPG" alt="landing page pie photo">
+            </div>
+            <div id="dailysoupspecialsscroll">
+                <h1>Daily Soup Specials</h1>
+                <div id="dailysoupspecialsscrollboxes">
+                    <ul>
+                        <li>
+                            <h5>Monday</h5>
+                            <div id="soup">
+                                <div class="soup1">
+                                    <img src="/Assignment3submit2.img/squashsouppexels-nataliya-vaitkevich-soupspecials.jpeg" alt="Yellow Squash with Dill Soup">
+                                    <caption>Yellow Squash with Dill - <br>Vegetarian</caption>
+                                </div>
+                                <div class="soup2">
+                                    <img src="/Assignment3submit2.img/tomatosouppexels-erik-mclean-soupspecialsphoto.jpeg" alt="Tomato Basil Soup">
+                                    <caption>Tomato Basil - <br>Vegetarian, Gluten Free, <br>Dairy Free, Vegan</caption>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            
+                            <h5>Tuesday</h5>
+                                <div id="soup">
+                                    <div class="soup1">
+                                        <img src="/Assignment3submit2.img/chickennoodlepexels-karolina-grabowska-soupspecialsphoto.jpg" alt="Chicken Noodle Soup">
+                                        <caption>Chicken Noodle - <br> Dairy Free</caption>
+                                    </div>
+                                    <div class="soup2">
+                                        <img src="/Assignment3submit2.img/tomatosouppexels-erik-mclean-soupspecialsphoto.jpeg" alt="Tomato Basil Soup">
+                                        <caption>Tomato Basil - <br>Vegetarian, Gluten Free, <br>Dairy Free, Vegan</caption>
+                                    </div>
+                                </div>
+                        </li>
+                        <li>
+                            <h5>Wednesday</h5>
+                                <div id="soup">
+                                    <div class="soup1">
+                                        <img src="/Assignment3submit2.img/curriedmushroompexels-polina-tankilevitch-soupspecialsphoto.jpeg" alt="">
+                                        <caption>Curried Mushroom - <br>Vegetarian</caption>
+                                    </div>
+                                    <div class="soup2">
+                                        <img src="/Assignment3submit2.img/tomatosouppexels-erik-mclean-soupspecialsphoto.jpeg" alt="Tomato Basil Soup">
+                                        <caption>Tomato Basil - <br>Vegetarian, Gluten Free, <br>Dairy Free, Vegan</caption>
+                                    </div>
+                                </div>
+                        </li>
+                        <li>
+                            <h5>Thursday</h5>
+                                <div id="soup">
+                                    <div class="soup1">
+                                        <img src="/Assignment3submit2.img/autumnministonepexels-fajri-nugroho-poupspecialsphoto.jpeg" alt="Autumn Ministrone Soup">
+                                        <caption>Autumn Minestrone - <br>Vegetarian, Gluten Free, Dairy Free, Vegan</caption>
+                                    </div>
+                                    <div class="soup2">
+                                        <img src="/Assignment3submit2.img/tomatosouppexels-erik-mclean-soupspecialsphoto.jpeg" alt="Tomato Basil Soup">
+                                        <caption>Tomato Basil - <br>Vegetarian, Gluten Free, <br>Dairy Free, Vegan</caption>
+                                    </div>
+                                </div>
+                        </li>
+                        <li>
+                            <h5>Friday</h5>
+                                <div id="soup">
+                                    <div class="soup1">
+                                        <img src="/Assignment3submit2.img/cornchowderpexels-she-eats-13788766 copy.jpg" alt="Corn Chowder Soup">
+                                        <caption>Corn Chowder - <br>Vegetarian</caption>
+                                    </div>
+                                    <div class="soup2">
+                                        <img src="/Assignment3submit2.img/tomatosouppexels-erik-mclean-soupspecialsphoto.jpeg" alt="Tomato Basil Soup">
+                                        <caption>Tomato Basil - <br>Vegetarian, Gluten Free, <br>Dairy Free, Vegan</caption>
+                                    </div>
+                                </div>
+                        </li>
+                        <li>
+                            <h5>Saterday</h5>
+                                <div id="soup">
+                                    <div class="soup1">
+                                        <img src="/Assignment3submit2.img/buternutsquashpexels-valeria-boltneva-soupspecialphoto.jpeg" alt="Butternut Squash Soup">
+                                        <caption>Butternut Squash - <br>Vegetarian</caption>
+                                    </div>
+                                    <div class="soup2">
+                                        <img src="/Assignment3submit2.img/tomatosouppexels-erik-mclean-soupspecialsphoto.jpeg" alt="Tomato Basil Soup">
+                                        <caption>Tomato Basil - <br>Vegetarian, Gluten Free, <br>Dairy Free, Vegan</caption>
+                                    </div>
+                                </div>
+                        </li>
+                    </ul>
+                </div>
+                
+            </div>
+            <div id="weeklyspecials"> <!--This part right here should be an inication on how the menu page should look.-->
+                <h1>Weekly Specials</h1><!--unfortunatly it's not quite what I had in mind as the words don't dissapear completely when you hover. Not sure how to do that but I'll keep it this way as it still looks good. Open to suggestions though.-->
+                <div id="weeklyspecialsboxes">
+                    <ul>
+                        <li id="savoryspinach">
+                            <h5>SAVORY SCONES</h5>
+                            <p>Spinach, Red Pepper, & Feta</p>
+                        </li>
+                        <li id="savorybacon">
+                            <h5>SAVORY SCONES</h5>
+                            <p>Bacon. Cheddar. & Chive</p>
+                        </li>
+                        <li id="quiche">
+                            <h5>QUICHE OF THE WEEK</h5>
+                            <p>Broccoli, Baby Spinach, Red Onion,
+                                <br>Manchego</p>
+                        </li>
+                        <li id="danish">
+                            <h5>DANISH SPECIAL</h5>
+                            <p>Butterscotch Pecan</p>
+                        </li>
+                        <li id="miniscone">
+                            <h5>MINI SCONE</h5>
+                            <p>Peach Ginger</p>
+                        </li>
+                        <li id="MichiganBlueberry">
+                            <h5>WEEKLY PIE</h5>
+                            <p>Michigan Blueberry</p>
+                           
+                        </li>
+                        <li id="annapple">
+                            <h5>WEEKLY PIE</h5>
+                            <p>Ann’s Apple</p>
+                        </li>
+                        <li id="applecrumb">
+                            <h5>WEEKLY PIE</h5>
+                            <p>Apple Crumb</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div id="employmentbutton">
+                <h1>Employment Oppertunities</h1>
+                <a href="#employment"><button>Learn More</button></a><!--all buttons on site will be cosmetic, as such this goes nowhere, as indecated in wireframe-->
+
+            </div>
+            <div id="closingphoto">
+                <img src="/Assignment3submit2.img/Screenshot 2023-09-16 at 22-30-27 Three Tarts Bakery and Cafe (@threetartsbakery) • Instagram photos and videos.png" alt="image of front of bakery">
+            </div>
+
+            <footer>
+                <div id="logo">
+                    <img src="/Assignment3submit2.img/Threetartslogo.png" alt="Three Tarts Logo">
+                </div>
+                <div id="footertext">
+                    <div id="generaldirections">
+                        <p>Located on Happ Road next to the Happ Inn and across from Mariano’s</p>
+                    </div>
+                    <div id="hoursandaddress">
+                        <div id="hours">
+                            <ul>
+                                <li>Monday: 8 am - 4pm </li><br>
+                                <li>Tuesday: 8 am - 4pm</li><br>
+                                <li>Wednesday: 8 am - 4pm</li><br>
+                                <li>Thursday: 8 am - 4pm</li><br>
+                                <li>Friday: 8 am - 4pm</li><br>
+                                <li>Saturday: 8 am - 4pm</li><br>
+                                <li>Sunday: Closed</li><br>
+                                <br>
+                            </ul>
+                        </div>
+                        <div id="addressandphone">
+                            <p>301 South Happ Road, Northfield IL 60093</p>
+                            <p>(847) 446-5444</p>
+                    </div>
+                    </div>
+                    <div id="instagramlink">
+                        <p>Follow Three Tarts Bakery:</p>
+                        <a href="#instagram"></a><!--gonna wait till the whole thing is done to link this, or at least put in the icon-->
+                    </div>
+                </div>
+                
+
+            </footer>
+        </div>
+    </body>
+</html>
