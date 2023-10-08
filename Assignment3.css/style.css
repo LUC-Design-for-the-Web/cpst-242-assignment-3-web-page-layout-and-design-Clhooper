@@ -1,0 +1,291 @@
+html, body, div, span, object, iframe,
+    h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+    abbr, address, cite, code,
+    del, dfn, em, img, ins, kbd, q, samp,
+    small, strong, sub, sup, var,
+    b, i,
+    dl, dt, dd, ol, ul, li,
+    fieldset, form, label, legend,
+    table, caption, tbody, tfoot, thead, tr, th, td,
+    article, aside, canvas, details, figcaption, figure, 
+    footer, header, hgroup, menu, nav, section, summary,
+    time, mark, audio, video {
+        margin:0;
+        padding:0;
+        border:0;
+        outline:0;
+        font-size:100%;
+        vertical-align:baseline;
+        background:transparent;
+    }
+
+    h1{
+        font-size: 45px;
+    }
+
+    h2{
+        font-size: 40px;
+    }
+
+    h3{
+        font-size: 35px;
+    }
+
+    h4{
+        font-size: 30px
+    }
+
+    h5{
+        font-size: 25px;
+    }
+
+    h6{
+        font-size: 20px;
+    }
+
+    p{
+        font-size: 18px;
+    }
+    
+    #containerhomepage{
+        width: 100%;
+        border: 5px solid green;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: auto auto auto 200% auto auto auto 15%;
+        grid-template-areas: "head head head"
+                            "open open open"
+                            "open open open"
+                            "soup soup soup"
+                            "week week week"
+                            "employ employ employ"
+                            "close close close"
+                            "foot foot foot";
+    }
+
+    header{
+        border: 3px solid blue;
+        grid-area: head;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: space-evenly;
+        align-content: center;
+    
+    }
+    .nav .item{
+
+      border: 2px solid blue;
+
+    }
+   
+    
+    .nav img{
+        display:block;
+        width: 30%;
+        margin: auto;
+        
+      
+    
+    }
+  #openingimage{
+    grid-area: open;
+  }
+
+  #openingimage img{
+    max-width: 100%;
+    max-height: 100%;
+    margin: auto;
+  }
+
+ 
+
+ 
+
+  #dailysoupspecialsscroll{
+    border: 3px solid pink;
+    grid-area: soup;
+    text-align: center;
+   
+    
+  }
+  #dailysoupspecialsscrollboxes{
+    display: flex;
+    flex: none;
+    justify-content: center;
+    align-items: center;
+    overflow-x: auto;
+    overflow-y: hidden;
+    width: 100%;
+  }
+  #dailysoupspecialsscrollboxes h3{
+    text-align: center;
+  }
+
+  #dailysoupspecialsscroll h1{
+    padding-top: 20%;
+    padding-bottom: 7%;
+
+    
+  }
+
+  #dailysoupspecialsscrollboxes li{
+    border: 2px solid orangered;
+    width: 450px;
+    height: 450px;
+    display: inline-block;
+    flex: 1 0 325;
+    background-color: #508C66;
+    border-radius: 25px;
+    margin-top: 10px;
+    text-align: center;
+    
+  }
+
+  #weeklyspecials{
+    border: 3px solid purple;
+    grid-area: week;
+    background-color: #A4C4AD;
+    text-align: center;
+    
+  }
+
+  #weeklyspecials h1{
+    padding-top: 10%;
+    padding-bottom: 7%;
+  }
+
+  #weeklyspecialsboxes{
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    
+  }
+  
+
+
+  #weeklyspecials li{
+    border: 2px solid orangered;
+    width: 350px;
+    height: 400px;
+    display: inline-block;
+    text-align: center;
+    background-color: #508C66;
+    border-radius: 25px;
+    
+   
+  }
+  #weeklyspecialsboxes li h5{
+    padding-top: 15%;
+    color: white;
+  }
+
+  #weeklyspecialsboxes li p{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    padding-top: 40%;
+    padding-left: 5%;
+    padding-right: 5%;
+    color: white;
+
+  
+   
+  }
+
+
+  #employmentbutton{
+    background-color: #A4C4AD;
+    grid-area: employ;
+   text-align: center;
+   padding-bottom: 5%;
+  }
+  #employmentbutton h1{
+    padding-top: 5%;
+    padding-bottom: 1%;
+  }
+
+  #employmentbutton button{
+    background-color: #508C66;
+    color: white;
+    font-size: 16px;
+    padding: 15px 32px;
+    border-radius: 25px;
+  }
+
+  #employmentbutton button:hover{
+    background-color: white;
+    color:#508C66;
+  }
+
+  #closingphoto{
+    background-color: #A4C4AD;
+    grid-area: close;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+
+  }
+  #closingphoto img{
+    width: 80%;
+    max-height: fit-content;
+    margin-bottom: -.8%;
+  }
+
+  footer{
+   
+    grid-area: foot;
+    height: 100%;
+  }
+
+  footer #logo img{
+    display:block;
+    max-width: 20%;
+    background-color: white;
+    margin-top: -60px;
+    margin-right:auto;
+    margin-left: auto;
+    
+  }
+  
+  #footertext #generaldirections{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 2%;
+    padding-bottom: 2%;
+  }
+
+  #hoursandaddress{
+    display: flex;
+    justify-content: space-evenly; 
+  }
+
+  #hours ul{
+    list-style-type: none;
+    font-size: 18px;
+  }
+
+  #addressandphone{
+    text-align: center;
+  }
+
+
+  #addressandphone p{
+    padding-bottom: 10px;
+  }
+
+  #instagramlink{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 1%;
+    padding-bottom: 3%;
+  }
+
+
+
+  
+ 
+  
