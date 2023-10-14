@@ -1,0 +1,1153 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Three Tarts Bakery</title>
+        <link rel="stylesheet" href='/Assignment4submit2.css/style.css'>
+        <meta charset="UTF-8">
+        <meta name="description" content="bakery, Three Tarts Bakery, three, tarts, bakery, northshore bakery, local bakery, cake, custom cake">
+        <meta name="keywords" content="menu, sandwich, salad, pastry, pie, toast, avacado, three tarts, bakery">
+        <meta name="author" content="Claire Hooper">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            #containermenupage{
+                display:grid;
+                grid-template-columns: repeat(3, 1fr);
+                grid-template-rows: 130px auto auto auto auto auto auto auto auto auto;
+                grid-template-areas: "head head head"
+                                    "title title title"
+                                    "weekly weekly weekly"
+                                    "weekend weekend weekend"
+                                    "sandwich sandwich sandwich"
+                                    "sandwich sandwich sandwich"
+                                    "salad salad salad"
+                                    "toast toast toast"
+                                    "soup soup soup"
+                                    "foot foot foot";
+            }  
+            
+            header{
+                grid-area: head;
+            }
+
+            #menutitle{
+                background-color: #A4C4AD;
+                grid-area: title;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                padding-top: 5%;
+                padding-bottom: 5%;
+                
+            }
+
+            #weeklyspecialsmenu{
+                grid-area: weekly;
+                background-color: #A4C4AD;
+            }
+            
+            #weeklyspecialsmenu h2{
+                padding-bottom: 1%;
+                display: flex;
+                justify-content: center; 
+            }
+
+            #weeklyspecialsmenu ul{
+                display: flex;
+                flex-wrap: wrap;
+                margin-left: 25px;
+                
+            }
+
+            #weeklyspecialsmenu li{
+                background-color: #508C66;
+                color: white;
+                border-radius: 25px;
+                border-left: 1px solid #A4C4AD;
+                border-top: 1px solid #A4C4AD;;
+                width: 350px;
+                height: 350px;
+                list-style-type: none;
+            }
+
+            #weeklyspecialsmenu li h5{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                margin-top: 5%;
+                margin-bottom: 5%
+            }
+            
+            #weeklyspecialsmenu li #description{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                padding-top: 3%;
+                margin-left: 15%;
+                margin-right: 15%;
+            }
+
+            
+            #weeklyspecialsmenu li #price{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+            }
+
+            #menuquiche:hover{
+                background-image: url(/Assignment4submit2.img/Quichemenu.png);
+            }
+            #menualmondcake:hover{
+                background-image: url(/Assignment4submit2.img/minialmondcakemenu.jpeg);
+            }
+            #menudanish:hover{
+                background-image: url(/Assignment4submit2.img/pecandanishmenu.png);
+            }
+            #menupeachmuffin:hover{
+                background-image: url(/Assignment4submit2.img/peachmuffinmenu.jpeg);
+            }
+            #menusavorysconebacon:hover{
+                background-image: url(/Assignment4submit2.img/baconcheddarchivesavorysconemenu.png);
+            }
+            #menusavorysconespinach:hover{
+                background-image: url(/Assignment4submit2.img/savorysconemenu.jpeg);
+            }
+            #menualmondtart:hover{
+                background-image: url(/Assignment4submit2.img/almondtartmenu.png);
+            }
+            #menubunt:hover{
+                background-image: url(/Assignment4submit2.img/ciderbundtcakemenu.jpeg);
+            }
+            #menuminiscone:hover{
+                background-image: url(/Assignment4submit2.img/Peachgingersconesmenu.png);
+            }
+
+
+
+            #weekendspecialsmenu{
+                grid-area: weekend;
+                background-color: #A4C4AD;
+            }
+
+            #weekendspecialsmenu h2{
+                padding-top: 3%;
+                padding-bottom: 1%;
+                display: flex;
+                justify-content: center; 
+            }
+
+            #weekendspecialsmenu ul{
+                display: flex;
+                flex-wrap: wrap;
+                margin-left: 25px;
+                
+            }
+
+            #weekendspecialsmenu li{
+                background-color: #508C66;
+                color: white;
+                border-radius: 25px;
+                border-left: 1px solid #A4C4AD;
+                border-top: 1px solid #A4C4AD;;
+                width: 350px;
+                height: 350px;
+                list-style-type: none;
+            }
+
+            #weekendspecialsmenu li h5{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                margin-top: 5%;
+                margin-bottom: 5%
+            }
+            
+            #weekendspecialsmenu li #description{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                padding-top: 3%;
+                margin-left: 15%;
+                margin-right: 15%;
+            }
+
+            
+            #weekendspecialsmenu li #price{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+            }
+
+            #menumichiganblue:hover{
+	            background-image: url(/Assignment4submit2.img/MichiganBlueberrypiemenu.png);
+	        }
+
+            #menuannsapple:hover{
+	            background-image: url(/Assignment4submit2.img/Anns\ apple\ copy.png);
+	        }
+            #menuapplecrumb:hover{
+	            background-image: url(/Assignment4submit2.img/applecrumbmenu.png);
+	        }
+            #menucinnamonswirl:hover{
+	            background-image: url(/Assignment4submit2.img/cinnomanswirlbreadmenu.jpeg);
+	        }
+            #menucinnamonroll:hover{
+	            background-image: url(/Assignment4submit2.img/cinnomanrollmenu.png);
+	        }
+            #menucoffeecakes:hover{
+	            background-image: url(/Assignment4submit2.img/coffeecakemenu.jpeg);
+	        }
+
+
+            #sandwichesmenu{
+                grid-area: sandwich;
+                background-color: #A4C4AD;
+            }
+
+            #sandwichesmenu h2{
+                padding-top: 3%;
+                padding-bottom: 1%;
+                display: flex;
+                justify-content: center; 
+            }
+
+            #sandwichesmenu ul{
+                display: flex;
+                flex-wrap: wrap;
+                margin-left: 25px;
+                
+            }
+
+            #sandwichesmenu li{
+                background-color: #508C66;
+                color: white;
+                border-radius: 25px;
+                border-left: 1px solid #A4C4AD;
+                border-top: 1px solid #A4C4AD;;
+                width: 350px;
+                height: 350px;
+                list-style-type: none;
+            }
+
+            #sandwichesmenu li h5{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                margin-top: 5%;
+                margin-bottom: 5%
+            }
+            
+            #sandwichesmenu li #description{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                padding-top: 3%;
+                margin-left: 15%;
+                margin-right: 15%;
+            }
+
+            
+            #sandwichesmenu li #price{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+            }
+
+            #heirloomtomato:hover{
+	            background-image: url(/Assignment4submit2.img/Heirloomtomatosandwich.png);
+	            }
+            #turkeyavocado:hover{
+                background-image: url(/Assignment4submit2.img/turkeyavacadosandwich.png);
+            }
+            #chickenrosemary:hover{
+                background-image: url(/Assignment4submit2.img/menuchickenrosemary.png);
+            }
+            #classicBLT:hover{
+                background-image: url(/Assignment4submit2.img/Classicblt.png);
+            }
+            #turkeycheddar:hover{
+                background-image: url(/Assignment4submit2.img/turkeycheddar.jpeg);
+            }
+            #chickenartichoke:hover{
+                background-image: url(/Assignment4submit2.img/chickenartachoke.jpeg);
+            }
+            #roastbeef:hover{
+                background-image: url(/Assignment4submit2.img/roastbeefsandwich.jpeg);
+            }
+            #capertuna:hover{
+                background-image: url(/Assignment4submit2.img/capertunasaladsandwich.jpeg) 
+            }
+            #veggiesunflower:hover{
+                background-image: url(/Assignment4submit2.img/veggiesunflower.jpeg);
+            }
+            #mozzarellapesto:hover{
+                background-image: url(/Assignment4submit2.img/monzzerellapesto.jpeg);
+            }
+            #chickensalad:hover{
+                background-image: url(/Assignment4submit2.img/chickenartachoke.jpeg);
+            }
+            #hamandbriepanini:hover{
+                background-image: url(/Assignment4submit2.img/HamandBrieSandwich.png);
+            }
+            #grownupgrilledcheese:hover{
+                background-image: url(/Assignment4submit2.img/grownupgrilledcheese.jpeg);
+            }
+            #hamandswiss:hover{
+                background-image: url(/Assignment4submit2.img/hamandswiss.jpeg);
+            }
+            #wildmushroompanini:hover{
+                background-image: url(/Assignment4submit2.img/wildmushroompanini.png);
+            }
+            #tunamelt:hover{
+                background-image: url(/Assignment4submit2.img/tunamelt.jpeg);
+            }
+            #chickenpesto:hover{
+                background-image: url(/Assignment4submit2.img/chickenpesto.jpeg);
+            }
+            #classicgrillecheese:hover{
+                background-image: url(/Assignment4submit2.img/ClassicGrilledCheese.png);
+            }
+
+
+            #saladsmenu{
+                grid-area: salad; 
+                background-color: #A4C4AD;
+            }
+
+            #saladsmenu h2{
+                padding-top: 3%;
+                padding-bottom: 1%;
+                display: flex;
+                justify-content: center; 
+            }
+
+            #saladsmenu ul{
+                display: flex;
+                flex-wrap: wrap;
+                margin-left: 25px;
+                
+            }
+
+            #saladsmenu li{
+                background-color: #508C66;
+                color: white;
+                border-radius: 25px;
+                border-left: 1px solid #A4C4AD;
+                border-top: 1px solid #A4C4AD;;
+                width: 350px;
+                height: 350px;
+                list-style-type: none;
+            }
+
+            #saladsmenu li h5{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                margin-top: 5%;
+                margin-bottom: 5%
+            }
+            
+            #saladsmenu li #description{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                padding-top: 3%;
+                margin-left: 15%;
+                margin-right: 15%;
+            }
+
+            
+            #saladsmenu li #price{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+            }
+
+            #summercobbsalad:hover{
+                background-image: url(/Assignment4submit2.img/Summercob\ .png);
+            }
+            #blueberryquinoasalad:hover{
+                background-image: url(/Assignment4submit2.img/Blueberryquinoa.png);
+            }
+            #jenniper:hover{
+                background-image: url(/Assignment4submit2.img/jenipersalad.jpeg);
+            }
+            #caesarsalad:hover{
+                background-image: url(/Assignment4submit2.img/caesarsalad.jpeg);
+            }
+            #spasalad:hover{
+                background-image: url(/Assignment4submit2.img/spasalad.jpeg);
+            }
+            #goatcheesesalad:hover{
+                background-image: url(/Assignment4submit2.img/goatcheesesalad.jpeg);
+            }
+            #nicoise:hover{
+                background-image: url(/Assignment4submit2.img/nicoisesalad.jpeg);
+            }
+            #chickentarragonsalad:hover{
+                background-image: url(/Assignment4submit2.img/chickensalad.jpeg);
+            }
+            #capertunasalad:hover{
+                background-image: url(/Assignment4submit2.img/capertunasaladsandwich.jpeg);
+            }
+         
+
+            #toastsmenu{
+                grid-area: toast;
+                background-color: #A4C4AD;  
+            }
+
+            #toastsmenu h2{
+                padding-top: 3%;
+                padding-bottom: 1%;
+                display: flex;
+                justify-content: center; 
+            }
+
+            #toastsmenu ul{
+                display: flex;
+                flex-wrap: wrap;
+                margin-left: 25px;
+                
+            }
+
+            #toastsmenu li{
+                background-color: #508C66;
+                color: white;
+                border-radius: 25px;
+                border-left: 1px solid #A4C4AD;
+                width: 350px;
+                height: 350px;
+                list-style-type: none;
+            }
+
+            #toastsmenu li h5{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                margin-top: 5%;
+                margin-bottom: 5%
+            }
+            
+            #toastsmenu li #description{
+
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                padding-top: 3%;
+                margin-left: 15%;
+                margin-right: 15%;
+            }
+
+            
+            #toastsmenu li #price{
+
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+            }
+
+            #threetartsavocadotoast:hover{
+                background-image: url(/Assignment4submit2.img/Avocadotoast.png);
+            }
+            #goatcheeseavocadotoast:hover{
+                background-image: url(/Assignment4submit2.img/goatcheeseavocadotoast.png);
+            }
+            #hummusavocadotoast:hover{
+                background-image: url(/Assignment4submit2.img/hummusavocadotoast.jpeg);
+            }
+            #avocadotahinitoast:hover{
+                background-image: url(/Assignment4submit2.img/tahiniavocadotoast.png);
+            }
+
+            #soupsmenu{
+
+                padding-bottom: 7%;
+                grid-area: soup;
+                background-color: #A4C4AD;
+            }
+
+            #soupsmenu h2{ 
+                padding-top: 3%;
+                padding-bottom: 1%;
+                display: flex;
+                justify-content: center; 
+            }
+
+            #soupsmenu ul{
+                display: flex;
+                justify-content: center;
+                flex-wrap: wrap;
+                margin-left: 25px;
+                
+            }
+
+            #soupsmenu li{
+                background-color: #508C66;
+                color: white;
+                border-radius: 25px;
+                border-left: 1px solid #A4C4AD;
+                width: 350px;
+                height: 350px;
+                
+                list-style-type: none;
+            }
+
+            #soupsmenu li h5{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                margin-top: 5%;
+                margin-bottom: 5%
+            }
+            
+            #soupsmenu li h6{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding-top: 3%;
+                margin-left: 15%;
+                margin-right: 15%;
+            }
+
+            
+            #soupsmenu li #price{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+            }
+
+            #yellowsquash:hover{
+                background-image: url(/Assignment4submit2.img/squashsoupmenu.jpeg);
+            }
+            #tomatobasil:hover{
+                background-image: url(/Assignment4submit2.img/tomatosoupmenu.jpeg);
+            }
+
+
+            footer{
+                grid-area: foot;
+            }
+
+            @media screen and (max-width: 1024px){
+                #soupsmenu ul, #toastsmenu ul, #saladsmenu ul, #sandwichesmenu ul, #weekendspecialsmenu ul, #weeklyspecialsmenu ul{
+                    margin-left: 15%;
+                }
+
+            }
+
+            @media screen and (max-width: 768px){
+                #menutitle p{
+                    margin-right: 18%;
+                    margin-left: 18%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    text-align: center;
+                }
+
+                #soupsmenu ul, #toastsmenu ul, #saladsmenu ul, #sandwichesmenu ul, #weekendspecialsmenu ul, #weeklyspecialsmenu ul{
+                    margin-left: 0;
+                    
+                }
+
+                #soupsmenu li, #toastsmenu li, #saladsmenu li, #sandwichesmenu li, #weekendspecialsmenu li, #weeklyspecialsmenu li{
+                    width: 100%;
+                    border-radius: 0%;
+                    border: 2px solid #A4C4AD
+                }
+
+               
+
+                #soupsmenu li #description, #toastsmenu li  #description, #saladsmenu li  #description, #sandwichesmenu li  #description, #weekendspecialsmenu li  #description, #weeklyspecialsmenu li  #description{
+                   width: 40%;
+                   margin-left: 28%;
+
+                }
+
+                #menuquiche:hover{
+                    display:none;
+                }
+                #menualmondcake:hover{
+                    display:none;
+                }
+                #menudanish:hover{
+                    display:none;
+                }
+                #menupeachmuffin:hover{
+                    display:none;
+                }
+                #menusavorysconebacon:hover{
+                    display:none;
+                }
+                #menusavorysconespinach:hover{
+                    display:none;
+                }
+                #menualmondtart:hover{
+                    display:none;
+                }
+                #menubunt:hover{
+                    display:none;
+                }
+                #menuminiscone:hover{
+                    display:none;
+                }
+                #menumichiganblue:hover{
+                    display:none;
+                }
+
+                #menuannsapple:hover{
+                    display:none;
+                }
+                #menuapplecrumb:hover{
+                    display:none;
+                }
+                #menucinnamonswirl:hover{
+                    display:none;
+                }
+                #menucinnamonroll:hover{
+                    display:none;
+                }
+                #menucoffeecakes:hover{
+                    display:none;
+                }
+
+                #heirloomtomato:hover{
+                    display:none;
+	            }
+                #turkeyavocado:hover{
+                    display:none;
+                }
+                #chickenrosemary:hover{
+                    display:none;
+                }
+                #classicBLT:hover{
+                    display:none;
+                }
+                #turkeycheddar:hover{
+                    display:none;
+                }
+                #chickenartichoke:hover{
+                    display:none;
+                }
+                #roastbeef:hover{
+                    display:none;
+                }
+                #veggiesunflower:hover{
+                    display:none;
+                }
+                #mozzarellapesto:hover{
+                    display:none;
+                }
+                #chickensalad:hover{
+                    display:none;
+                }
+                #hamandbriepanini:hover{
+                    display:none;
+                }
+                #grownupgrilledcheese:hover{
+                    display:none;
+                }
+                #hamandswiss:hover{
+                    display:none;
+                }
+                #wildmushroompanini:hover{
+                    display:none;
+                }
+                #tunamelt:hover{
+                    display:none;
+                }
+                #chickenpesto:hover{
+                    display:none;
+                }
+                #classicgrillecheese:hover{
+                    display:none;
+                }
+
+                #summercobbsalad:hover{
+                    display:none;
+                }
+                #blueberryquinoasalad:hover{
+                    display:none;
+                }
+                #jenniper:hover{
+                    display:none;
+                }
+                #caesarsalad:hover{
+                    display:none;
+                }
+                #spasalad:hover{
+                    display:none;
+                }
+                #goatcheesesalad:hover{
+                    display:none;
+                }
+                #nicoise:hover{
+                    display:none;
+                }
+                #chickentarragonsalad:hover{
+                    display:none;
+                }
+                #capertunasalad:hover{
+                    display:none;
+                }
+                #threetartsavocadotoast:hover{
+                    display:none;
+                }
+                #goatcheeseavocadotoast:hover{
+                    display:none;
+                }
+                #hummusavocadotoast:hover{
+                    display:none;
+                }
+                #avocadotahinitoast:hover{
+                    display:none;
+                }
+                #yellowsquash:hover{
+                    display:none;
+                }
+                #tomatobasil:hover{
+                    display:none;
+                }
+
+                #soupsmenu{
+                    padding-bottom: 30%;
+                }
+
+            }
+
+
+
+        </style>
+    </head>
+    <body>
+        <div id="containermenupage">
+            <header>
+                <div id="nav">
+                     <a href="/Assignment4submit2.html/menu.html">Menu</a><!--not completed yet but look at weekly specials to see the concept for squares-->
+                </div>
+                <div id="nav-logo">
+                     <a href="/Assignment4submit2.html/homepage.html"><img src="/Assignment4submit2.img/Threetartslogo.png"></a>
+                </div>
+                <div id="nav-right">
+                     <a href="/Assignment4submit2.html/cakeorderpage.html">Cake Order</a><!--almost finished just getting everything formated, for now this link goes nowhere-->
+                </div>
+ 
+                <div id="nav-mobile">
+                     <div id="links">
+                         <a href="/Assignment4submit2.html/menu.html">Menu</a>
+                         <a href="/Assignment4submit2.html/cakeorderpage.html">Cake Order</a>
+                     </div>
+                </div>
+ 
+            </header>
+
+             <div id="menutitle">
+                <h1>Menu</h1>
+                <p>Allergen Warning</p>
+                <p>Before placing your order, please inform your server if a person in your party has a food allergy</p>
+             </div>
+             <div id="weeklyspecialsmenu">
+                <h2>Weekly Specials</h2>
+                <ul>
+                    <li id="menuquiche">
+                        <h5>Quiche: <br>Spinach, Red Pepper,<br> & Feta</h5>
+                        <p id="price" style=" margin-top: 38%">$7.75 - Slice<br>
+                        $31.50 - Whole</p>
+                    </li>
+                    <li id="menualmondcake">
+                       <h5>Mini Almond Cake</h5> 
+                       <p id="description">Gluten Free</p>
+                       <p id="description">With Slivered Almonds and a Lemon
+                        Glaze</p>
+                       <p id="price" style=" margin-top: 29%">$7.95</p>
+                    </li>
+                    <li id="menudanish">
+                        <h5>Butterscotch Pecan <br>Danish</h5>
+                        <p id="price" style=" margin-top: 51%">$3.85</p>
+                    </li>
+                    <li id="menupeachmuffin">
+                        <h5>Peach Cobbler <br>Muffin</h5>
+                        <p id="price" style=" margin-top: 51%">$4.25</p>
+                    </li>
+                    <li id="menusavorysconebacon">
+                        <h5>Bacon, Cheddar, <br>& Chive Savory Scone</h5>
+                        <p id="price" style=" margin-top: 47%">$3.95</p>
+                    </li>
+                    <li id="menusavorysconespinach">
+                        <h5>Spinach, Red Pepper, & <br>Feta Savory Scone</h5>
+                        <p id="price" style=" margin-top: 47%">$3.95</p>
+                    </li>
+                    <li id="menualmondtart">
+                        <h5>Almond Tart</h5>
+                        <p id="description">Cherry</p>
+                        <p id="price" style=" margin-top: 38%">$7.80 - Individual<br>
+                        $19 - 6" Round</p>
+                    </li>
+                    <li id="menubunt">
+                        <h5>Apple Cider Bundt</h5>
+                        <p id="price" style=" margin-top: 58%">$22.75</p>
+                    </li>
+                    <li id="menuminiscone">
+                        <h5>Wednesday<br> Mini Scone:<br> Peach Ginger</h5>
+                        <p id="price" style=" margin-top: 44%">$1.80</p>
+                    </li>
+                </ul>
+             </div>
+             <div id="weekendspecialsmenu">
+                <h2>Weekend Specials</h2>
+                <ul>
+                    <li id="menumichiganblue">
+                        <h5>Weekly Pie</h5>
+                        <h5>Michigan Blueberry</h5>
+                        <p id="price" style=" margin-top: 50%">$32</p>
+                    </li>
+                    <li id="menuannsapple">
+                        <h5>Weekly Pie</h5>
+                        <h5>Ann’s Apple</h5>
+                        <p id="price" style=" margin-top: 50%">$32</p>
+                    </li> 
+                    <li id="menuapplecrumb">
+                        <h5>Weekly Pie</h5>
+                        <h5>Apple Crumb</h5>
+                        <p id="price" style=" margin-top: 50%">$32</p>
+                    </li>
+                    <li id="menucinnamonswirl">
+                        <h5>Cinnamon Swirl <br>Bread</h5>
+                        <p id="description">Our Challah swirled with Cinnamon
+                            Made with Raisins by order</p>
+                        <p id="price" style=" margin-top: 27%">$7.50</p>
+                    </li>
+                    <li id="menucinnamonroll">
+                        <h5>Cinnamon Roll Pan</h5>
+                        <p id="description">A half-dozen mini Cinnamon Rolls,
+                            read to re-heat in a foil pan</p>
+                        <p id="price" style=" margin-top: 44%">$10.75</p>
+                    </li>
+                    <li id="menucoffeecakes">
+                        <h5>Danish Coffeecakes</h5>
+                        <p id="description">Apple, Apricot, Cinnamon-Raisin,
+                            Raspberry, Raspberry-Almond,
+                            Almond, Chocolate, Cinnamon-Pecan,
+                            Cinnamon-Walnut</p>
+                        <p id="price" style=" margin-top: 25%">$15.50</p>
+                    </li>
+                </ul>
+
+             </div>
+             <div id="sandwichesmenu">
+                <h2>Sandwiches</h2>
+                <ul>
+                    <li id="heirloomtomato">
+                        <h5>Special: <br>
+                            Heirloom Tomato</h5>
+                        <p id="description">Local Heirloom Tomatoes. Havarti
+                            Cheese, housemade Basil Mayo, fresh</p>
+                        <p id="price" style=" margin-top: 28%">$10</p>
+                    </li>
+                    <li id="turkeyavocado">
+                        <h5>Turkey Avocado</h5>
+                        <p id="description">Local Heirloom Tomatoes. Havarti
+                            Cheese, housemade Basil Mayo, fresh
+                            cracked Salt and Pepper on 5 Grain
+                            Toast</p>
+                        <p id="price" style=" margin-top: 32%">$10</p>
+                    </li>
+                    <li id="chickenrosemary">
+                        <h5>Chicken Rosemary</h5>
+                        <p id="description">Oven-Roasted Chicken Breast. Roasted
+                            Tomato, Lettuce, and Rosemary Mayo
+                            on Country French</p>
+                        <p id="price" style=" margin-top: 32%">$11.50</p>
+                    </li>
+                    <li id="classicBLT">
+                        <h5>Classic BLT</h5>
+                        <p id="description">Applewood Smoked Bacon, Romaine,
+                            Fresh Tomato, and Mayo on Toasted
+                            Country French</p>
+                        <p id="price" style=" margin-top: 32%">$11.50</p>
+                    </li>
+                    <li id="turkeycheddar">
+                        <h5>Turkey Cheddar</h5>
+                        <p id="description">Roasted Turkey, Cheddar, thinly sliced
+                            Apple, Mixed Greens, and Honey
+                            Mustard on Pumpernickel Raisin</p>
+                        <p id="price" style=" margin-top: 33%">$11.50</p>
+                    </li>
+                    <li id="chickenartichoke">
+                        <h5>Chicken Artichoke</h4>
+                        <p id="description">Oven-Roasted Chicken Breast, Mixed
+                            Greens, Red Onion, and Artichoke
+                            Mayo on Black Pepper Stirato</p>
+                        <p id="price" style=" margin-top: 33%">$11.50</p>
+                    </li>
+                    <li id="roastbeef">
+                        <h5>Roast Beef</h5>
+                        <p id="description">Roast Beef, Roasted Red Pepper,
+                            Romaine, and Horseradish Mayo on
+                            Caramelized Onion Stirato</p>
+                        <p id="price" style=" margin-top: 33%">$12.95</p>
+                    </li>
+                    <li id="capertuna">
+                        <h5>Caper Tuna</h5>
+                        <p id="description">Albacore Tuna mixed with Pickle
+                            Relish, Capers, Onion, and Mayo, with
+                            Fresh Tomato on Olive Rosemary</p>
+                        <p id="price" style=" margin-top: 33%">$10.75</p>
+                    </li>
+                    <li id="veggiesunflower">
+                        <h5>Veggie Sunflower</h5>
+                        <p id="description">Hummus, Cucumber. Roasted Tomato.
+                            Red Onion, Swiss Cheese, and Mixed
+                            Greens on Sunflower Millet</p>
+                        <p id="price" style=" margin-top: 33%">$8.50</p>
+                    </li>
+                    <li id="mozzarellapesto">
+                        <h5>Mozzarella Pesto</h5>
+                        <p id="description">Fresh Mozzarella, Fresh Tomato, Basil
+                            Pesto, and Balsamic Vinaigrette on
+                            French Baguette</p>
+                        <p id="price" style=" margin-top: 33%">$10</p>
+                    </li>
+                    <li id="chickensalad">
+                        <h5>Chicken Salad</h5>
+                        <p id="description">Chicken Tarragon Salad with Fresh
+                            Cucumber on 5 Grain</p>
+                        <p id="price" style=" margin-top: 45.7%">$10.75</p>
+                    </li> 
+                    <li id="hamandbriepanini">
+                        <h5>Ham & Brie <br>Panini</h5>
+                        <p id="description">Ham off-the-bone, Brie, thinly sliced
+                            Honeycrisp Apple, Mixed Greens, and
+                            Grain Mustard Mayo on Country
+                            French</p>
+                        <p id="price" style=" margin-top: 23%">$12.95</p>
+                    </li>
+                    <li id="grownupgrilledcheese">
+                        <h5>Grown-Up Grilled
+                            <br>Cheese</h5>
+                        <p id="description">Bacon, Caramelized Onions, Roasted
+                            Tomato, and Provolone on Country French</p>
+                        <p id="price" style=" margin-top: 29%">$11.50</p>
+                    </li>
+                    <li id="hamandswiss">
+                        <h5>Ham & Swiss</h5>
+                        <p id="description">Ham off-the-Bone, Swiss Cheese, and
+                            Honey Mustard Country French</p>
+                        <p id="price" style=" margin-top: 39%">$11.50</p>
+                    </li>
+                    <li id="wildmushroompanini">
+                        <h5>Wild Mushroom <br>Panini</h5>
+                        <p id="description">Sauteed Wild Mushrooms &
+                            Caramelized Onions, Provolone, and
+                            Rosemary Mayo on Ciabatta</p>
+                        <p id="price" style=" margin-top: 22%">$10</p>
+                    </li>
+                    <li id="tunamelt">
+                        <h5>Tuna Melt</h5>
+                        <p id="description">Housemade Caper Tuna Salad, Fresh
+                            Tomato, and American Cheese on
+                            Sunflower Millet</p>
+                        <p id="price" style=" margin-top: 39%">$11.50</p>
+                    </li>
+                    <li id="chickenpesto">
+                        <h5>Chicken Pesto</h5>
+                        <p id="description">Oven-Roasted Chicken Breast, Roasted
+                            Tomato, Pesto, and Provolone on
+                            Country French</p>
+                        <p id="price" style=" margin-top: 39%">$11.50</p>
+                    </li>
+                    <li id="classicgrillecheese">
+                        <h5>Classic Grilled Cheese</h5>
+                        <p id="description">Country French and Cheddar Cheese
+                            the classic!</p>
+                        <p id="price" style=" margin-top: 45%">$7.25</p>
+                    </li>
+                </ul>
+
+             </div>
+             <div id="saladsmenu">
+                <h2>Salads</h2>
+                    <ul>
+                        <li id="summercobbsalad">
+                            <h5>Special: <br>Summer Cobb Salad</h5>
+                            <p id="description">Romaine, Roasted Corn. Tomato.
+                                Avocado, Roasted Red Onion, Hard
+                                Boiled Egg, Blue Cheese, Bacon,
+                                Local Microgreens, and Fresh Basil,
+                                with our Buttermilk Ranch</p>
+                            <p id="price" style=" margin-top: 9%">$14.50</p>
+                        </li>
+                        <li id="blueberryquinoasalad">
+                            <h5>Special: <br>Seasonal Blueberry <br>Quinoa Salad</h5>
+                            <p id="description">Mixed Greens, Michigan Blueberries,
+                                Cucumber, local Microgreens, Quinoa,
+                                Feta, and toasted Sunflower Seeds with
+                                Green Onion Dressing</p>
+                            <p id="price" style=" margin-top: 5%">$9.95</p>
+                        </li>
+                        <li id="jenniper">
+                            <h5>Jenniper</h5>
+                            <p id="description">Mixed Greens, Dried Cranberries,
+                                Toasted Walnuts, Cucumber, Roasted
+                                Onion, and Goat Cheese with our
+                                Balsamic Vinaigrette</p>
+                            <p id="price" style=" margin-top: 25%">$8.50</p>
+                        </li>
+                        <li id="caesarsalad">
+                            <h5>Caesar Salad</h5>
+                            <p id="description">Romaine. Fresh Mozzarella, Roasted
+                                Tomato, Shaved Parmesan, and
+                                Crostini with our housemade Caesar
+                                Dressing</p>
+                            <p id="price" style=" margin-top: 31%">$12.95</p>
+                        </li>
+                        <li id="spasalad">
+                            <h5>Spa Salad</h5>
+                            <p id="description">Mixed Greens and Romaine, Chicken
+                                Breast, Raisins, Toasted Walnuts, and
+                                shaved Parmesan with our Green
+                                Apple Dressing</p>
+                            <p id="price" style=" margin-top: 26%">$14.50</p>
+                        </li>
+                        <li id="goatcheesesalad">
+                            <h5>Goat Cheese Salad</h5>
+                            <p id="description">Mixed Greens. Goat Cheese. Roasted
+                                Onion. Potato. Crostini. Cucumber.
+                                and Tomato with our Balsamic
+                                Vinaigrette</p>
+                            <p id="price" style=" margin-top: 26%">$12.95</p>
+                        </li>
+                        <li id="nicoise">
+                            <h5>Nicoise</h5>
+                            <p id="description">Mixed greens, French Beans, Tomato,
+                                Potato. Albacore Tuna Salad. Hard-
+                                Boiled Egg, and Olives with our
+                                Balsamic Vinaigrette</p>
+                            <p id="price" style=" margin-top: 26%">$14.50</p>
+                        </li>
+                        <li id="chickentarragonsalad">
+                            <h5>Chicken Tarragon <br>Salad</h5>
+                            <p id="price" style=" margin-top: 53%">$4.25 - single scoop
+                            <br>$12.50 - 8 oz. deli container</p>
+                        </li>
+                        <li id="capertunasalad">
+                            <h5>Caper Tuna Salad</h5>
+                            <p id="price" style=" margin-top: 63%">$4.25 - single scoop
+                            <br>$12.50- 8 oz. deli container</p>
+                        </li>
+                    </ul>
+
+             </div>
+             <div id="toastsmenu">
+                <h2>Toasts</h2>
+                    <ul>
+                        <li id="threetartsavocadotoast">
+                            <h5>Three Tarts Avocado <br>Toast</h5>
+                            <p id="description">Hand-cut Sunflower Millet. toasted and
+                                topped with Avocado, Sea Salt, and
+                                Fresh Cracked Pepper</p>
+                            <p id="price" style=" margin-top: 23%">$7.50</p>
+                        </li>
+                        <li id="goatcheeseavocadotoast">
+                            <h5>Special: <br>Goat Cheese Avocado <br>Toast</h5>
+                            <p id="description">Hand-cut toasted Sunflower Millet
+                                spread with Avocado and topped with Goat Cheese Finished
+                                with Farm to Table
+                                Microgreens, Balsamic, Sea Salt, and
+                                Pepper</p>
+                            <p id="price">$9.25</p>
+                        </li>
+                        <li id="hummusavocadotoast">
+                            <h5>Special: <br>Hummus Avocado Toast</h5>
+                            <p id="description">Hand-cut toasted Sunflower Millet
+                                spread with housemade Hummus and
+                                topped with sliced Avocado
+                                Finished with Parsley, Lemon, Sea
+                                Salt, and Pepper</p>
+                            <p id="price" style=" margin-top: 17%">$8.25</p>
+                        </li>
+                        <li id="avocadotahinitoast">
+                            <h5>Avocado Tahini Toast</h5>
+                            <p id="description">Hand-cut toasted Sunflower Millet.
+                                spread with Tahini
+                                Topped with Chopped Avocado,
+                                Cucumber, and Red Onion
+                                Finished with Lemon, Sea Salt, and
+                                Aleppo Pepper</p>
+                            <p id="price" style=" margin-top: 20%">$9.25</p>
+                        </li>
+                    </ul>
+             </div>
+             <div id="soupsmenu">
+                <h2>Soup of the Day</h2>
+                    <ul>
+                        <li id="yellowsquash">
+                            <h5>Yellow Squash with Dill - <br>Vegetarian</h5>
+                            <h6>$5.95 - 12 oz</h6>
+                            <h6>$7.75 -16 oz</h6>
+                            <h6>$15 - Take-Home Quart</h6>
+                        </li>
+                        <li id="tomatobasil">
+                            <h5>Tomato Basil - <br>Vegetarian, Gluten Free, <br>Dairy Free, Vegan</h5>
+                            <h6>$5.95 - 12 oz</h6>
+                            <h6>$7.75 -16 oz</h6>
+                            <h6>$15 - Take-Home Quart</h6>
+                        </li>
+                    </ul>
+             </div>
+             <footer>
+                <div id="logo">
+                    <img src="/Assignment4submit2.img/Threetartslogo.png" alt="Three Tarts Logo">
+                </div>
+                <div id="footertext">
+                    <div id="generaldirections">
+                        <p>Located on Happ Road next to the Happ Inn and across from Mariano’s</p>
+                    </div>
+                    <div id="hoursandaddress">
+                        <div id="hours">
+                            <ul>
+                                <li>Monday: 8 am - 4pm </li><br>
+                                <li>Tuesday: 8 am - 4pm</li><br>
+                                <li>Wednesday: 8 am - 4pm</li><br>
+                                <li>Thursday: 8 am - 4pm</li><br>
+                                <li>Friday: 8 am - 4pm</li><br>
+                                <li>Saturday: 8 am - 4pm</li><br>
+                                <li>Sunday: Closed</li><br>
+                                <br>
+                            </ul>
+                        </div>
+                        <div id="addressandphone">
+                            <p>301 South Happ Road, Northfield IL 60093</p>
+                            <p>(847) 446-5444</p>
+                    </div>
+                    </div>
+                    <div id="instagramlink">
+                        <p>Follow Three Tarts Bakery:</p>
+                        <a href="https://www.instagram.com/threetartsbakery"><img src="/Assignment4submit2.img/instagram_icon.png"></a>
+                    </div>
+                </div>
+                
+
+            </footer>
+
+        </div>
+    </body>
+</html>
