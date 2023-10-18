@@ -1,0 +1,185 @@
+html, body, div, span, object, iframe,
+    h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+    abbr, address, cite, code,
+    del, dfn, em, img, ins, kbd, q, samp,
+    small, strong, sub, sup, var,
+    b, i,
+    dl, dt, dd, ol, ul, li,
+    fieldset, form, label, legend,
+    table, caption, tbody, tfoot, thead, tr, th, td,
+    article, aside, canvas, details, figcaption, figure, 
+    footer, header, hgroup, menu, nav, section, summary,
+    time, mark, audio, video {
+        margin:0;
+        padding:0;
+        border:0;
+        outline:0;
+        font-size:100%;
+        vertical-align:baseline;
+        background:transparent;
+    }
+
+    @font-face {
+      font-family: PlayfairDisplay;
+      src: url(PlayfairDisplay-VariableFont_wght\ copy.ttf);
+    }
+    
+    @font-face {
+      font-family: ViodaLibre;
+      src: url(ViaodaLibre-Regular\ copy.ttf);
+    }
+
+    @font-face {
+      font-family: BigCalson;
+      src: url(Big-Caslon-Medium\ copy\ 2.ttf);
+    }
+
+    h1{
+        font-size: 45px;
+        font-family: PlayfairDisplay;
+    }
+
+    h2{
+        font-size: 40px;
+        font-family: ViodaLibre;
+    }
+
+    h3{
+        font-size: 35px;
+        font-family: ViodaLibre;
+    }
+
+    h4{
+        font-size: 30px;
+        font-family: ViodaLibre;
+    }
+
+    h5{
+        font-size: 25px;
+        font-family: ViodaLibre;
+    }
+
+    h6{
+        font-size: 20px;
+        font-family: ViodaLibre;
+    }
+
+    p{
+        font-size: 18px;
+        font-family: BigCalson;
+    }
+
+    header{
+        width: 100%;
+        position: relative;
+        overflow: hidden;
+    
+    }
+
+    header a{
+      text-decoration: none;
+      font-size: 20px;
+      font-family: ViodaLibre;
+      color: #3A9161;
+    }
+
+    #nav a:hover{
+      color: black;
+      text-shadow: 1px 1px black;
+
+    }
+
+    #nav{
+      float: left;
+      text-align: center;
+      text-decoration: none;
+      text-align: center;
+      padding: 14px 16px;
+      margin-left: 20%;
+      margin-top: 2.5%;
+      
+    }
+
+    
+
+    #nav-logo{
+      float: none;
+      position:absolute;
+      text-align: center;
+      margin-top: 5px;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    #nav-logo img{
+      width: 30%;
+    }
+   
+    #nav-right{
+      float: right;
+      text-align: center;
+      text-align: center;
+      padding: 14px 16px;
+      margin-right: 20%;
+      margin-top: 2.5%;     
+    }
+
+    #nav-right a:hover{
+      color: black;
+      text-shadow: 1px 1px black;
+    }
+  footer{
+    height: 100%;
+  }
+
+  footer #logo img{
+    display:block;
+    max-width: 20%;
+    background-color: white;
+    margin-top: -60px;
+    margin-right:auto;
+    margin-left: auto;
+    
+  }
+  
+  #footertext #generaldirections{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 2%;
+    padding-bottom: 2%;
+  }
+
+  #hoursandaddress{
+    display: flex;
+    justify-content: space-evenly; 
+  }
+
+  #hours ul{
+    list-style-type: none;
+    font-size: 18px;
+  }
+
+  #addressandphone{
+    text-align: center;
+  }
+
+
+  #addressandphone p{
+    padding-bottom: 10px;
+  }
+
+  #instagramlink{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 1%;
+    padding-bottom: 3%;
+  }
+
+
+
+  
+ 
+  
