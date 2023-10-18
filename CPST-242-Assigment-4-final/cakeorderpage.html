@@ -1,0 +1,798 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Three Tarts Bakery</title>
+        <link rel="stylesheet" href='style.css'>
+        <meta charset="UTF-8">
+        <meta name="description" content="bakery, Three Tarts Bakery, three, tarts, bakery, northshore bakery, local bakery, cake, custom cake">
+        <meta name="keywords" content="Cake, custom cake, cake order, cake order form, three tarts bakery, baker, three, tarts, local">
+        <meta name="author" content="Claire Hooper">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            #cakeordercontainer{
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                grid-template-rows: 130px auto auto auto auto auto auto auto 10%;
+                grid-template-areas: "head head head"
+                                    "title title title"
+                                    "cake cake cake"
+                                    "cake cake cake"
+                                    "cake cake cake"
+                                    "cake cake cake"
+                                    "cake cake cake"
+                                    "cake cake cake"
+                                    "foot foot foot";
+            }
+
+            header{
+                grid-area: head;
+                
+            }
+            #cakeorderformtitle{
+                grid-area: title;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding-top: 5%;
+                padding-bottom: 5%;
+                background-color: #A4C4AD;
+            }
+            #customcake{
+                grid-area: cake;
+                background-color: #A4C4AD;
+            }
+             
+            #standardcakestitle{
+                margin-bottom: 2%;
+            }
+
+            #standardcakestitle h2{
+                display:flex;
+                justify-content: center; 
+                align-items: center;
+            }
+
+            #standardcakestitle h6{
+                display:flex;
+                justify-content: center; 
+                align-items: center;
+            }
+
+            #standardcakeoptions{
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: flex-start;
+                align-items: center; 
+                margin-left: 7%;
+                
+                
+
+            }
+
+
+            #standardsubmit{
+                display: flex;
+                justify-content: center; 
+                align-items: center;
+                margin-top: 2%;
+            }
+
+            input[type=submit]{
+                background-color: #6E997B;
+                color: white;
+                padding: 9px 20px;
+                border-radius: 11px;
+                cursor: pointer;
+                font-size: 25px;
+                font-family: ViodaLibre;
+                
+            }
+
+            input[type=submit]:hover{
+                background-color: white;
+                color: #6E997B;
+            }
+
+            select{
+                padding: 10px 10px;
+                border-radius:0%;
+                border: 3px dotted #3b5643;
+                background-color:#b2cdb9;
+                font-size: 16px;
+                font-family: BigCalson;
+                cursor: pointer;
+            }
+
+            select:hover{
+                background-color: #BBE0C4;
+                border: 3px dotted #3ED164;
+            }
+            
+
+            #customcakesform{
+                margin-bottom: 6%
+            }
+
+            #customcakestitle{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                margin-bottom: 2%;
+                margin-top: 5%;
+            }
+
+            #customcakesformsquares h3{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            #cakeflavors{
+                display: flex;
+                justify-content: space-evenly;
+                margin-bottom: 2%;
+            }
+
+            #glutenfreeflavors{
+                display: flex;
+                justify-content: space-evenly;
+                margin-bottom: 2%;
+            }
+
+            #fillings{
+                display: flex;
+                justify-content: space-evenly;
+                margin-bottom: 2%; 
+            }
+
+            #icings{
+                display: flex;
+                justify-content: space-evenly;
+                margin: 2%;  
+            }
+
+            #col1 ul{
+                list-style-type: none;
+                font-size: 18px;
+                font-family: BigCalson;
+            }
+
+            #col1 li{
+                padding-top: 12px;
+                width: 300px;
+            }
+
+            #col2 ul{
+                list-style-type: none;
+                font-size: 18px;
+                font-family: BigCalson;
+            }
+
+            #col2 li{
+                padding-top: 12px;
+                width: 300px;
+            }
+
+            #col3 ul{
+                list-style-type: none;
+                font-size: 18px;
+                font-family: BigCalson;
+            }
+
+            #col3 li{
+                padding-top: 12px;
+                width: 300px;
+            }
+
+            #decoandfin{
+                display:flex;
+                justify-content: center;
+                align-items: center;
+                margin-bottom: 2%;
+            }
+
+            #decoandfin li{
+                list-style-type: none;
+            }
+
+            #decoandfin label{
+                font-size: 20px;
+                font-family: ViodaLibre;
+            }
+
+            #decoandfin p{
+                margin-left: 6%; 
+            }
+
+            #additionalcomments{
+                display: flex;
+                flex-direction: column;
+                width: 500px;
+                margin-left: 7%;
+            }
+
+
+           #additionalcomments label{
+                font-size: 25px;
+                font-family: ViodaLibre;
+
+           }
+
+           #additionalcomments textarea{
+                width: 100%;
+                height: 150px;
+                padding: 10px 20px;
+                box-sizing: border-box;
+                resize: none;
+                font-size: 16px;
+                font-family: BigCalson;
+           }
+
+  
+            footer{
+                grid-area: foot;
+            }
+
+            @media screen and (max-width: 1024px){
+                #standardsubmit{
+                    padding-bottom: 5%;
+                }
+            }
+            @media screen and (max-width: 768px){
+
+                #standardcakestitle h6{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    text-align: center;
+                }
+                #cakeflavors, #glutenfreeflavors, #fillings, #icings{
+                    display: flex;
+                    flex-wrap: wrap;
+                }
+
+                #additionalcomments{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    width: 400px;
+                    margin-left: 7%;
+                }
+
+                #standardsubmit{
+                    padding-bottom: 15%;
+                }
+            }
+
+
+
+        </style>
+    </head>
+    <body>
+        <div id="cakeordercontainer">
+            <header>
+                <div id="nav">
+                     <a href="/Assignment4submit2.html/menu.html">Menu</a><!--not completed yet but look at weekly specials to see the concept for squares-->
+                </div>
+                <div id="nav-logo">
+                     <a href="/Assignment4submit2.html/homepage.html"><img src="img/Threetartslogo.png"></a>
+                </div>
+                <div id="nav-right">
+                     <a href="/Assignment4submit2.html/cakeorderpage.html">Cake Order</a><!--almost finished just getting everything formated, for now this link goes nowhere-->
+                </div>
+ 
+                <div id="nav-mobile">
+                     <div id="links">
+                         <a href="/Assignment4submit2.html/menu.html">Menu</a>
+                         <a href="/Assignment4submit2.html/cakeorderpage.html">Cake Order</a>
+                     </div>
+                </div>
+ 
+            </header>
+
+             <div id="cakeorderformtitle">
+                <h1>Cake Order</h1>
+             </div>
+             <div id="customcake">
+                <div id="standardcakesform">
+                    <div id="standardcakestitle">
+                        <h2>Standard Cakes</h2>
+                        <h6>Please order all cakes in advance - limited availability in store for same-day pickup</h6>
+                    </div>
+                    <div id="standardcakesformsquares">
+                        <form action="#formtarget" method="get">
+                            <div id="standardcakeoptions">
+                                <div id="bananacake" style="width: 400px;
+                                height: 400px;">
+                                    <img src="img/bananacake.png" alt="Bananna Cake" style="width: 60%; margin-left: 20%;">
+                                    <h4 style=" display: flex;
+                                    justify-content: center;
+                                    align-items: center;">Best Ever Banana</h4>
+                                    <h6 style="text-align: center;">Banana Cake filled and iced with Vanilla Buttercream</h6>
+                                    <input type="radio" id="6inch" name="cake" value="6 inch cake-$37" style="margin-left: 18%;">
+                                        <label for="6inch">6 inch cake-$37</label>
+                                    <input type="radio" id="8inch" name="cake" value="8 inch cake-$61">
+                                        <label for="8inch">8 inch cake-$61</label>
+                                </div>
+                                <div id="carrotcake" style="width: 400px;
+                                height: 400px;">
+                                    <img src="img/carrotcake.png" alt="Carrot Cake" style="width: 60%; margin-left: 20%;">
+                                    <h4 style="display: flex;
+                                    justify-content: center;
+                                    align-items: center;">Carrot Cake</h4>
+                                    <h6 style="text-align: center;">Made with Raisins,
+                                        Coconut, and Walnuts
+                                        Topped with Cream Cheese
+                                        Buttercream, Toasted Coconut, and
+                                        Marzipan Carrots</h6>
+                                    <input type="radio" id="6inch" name="cake" value="6 inch cake-$42" style="margin-left: 18%">
+                                        <label for="6inch">6 inch cake-$42</label>
+                                    <input type="radio" id="8inch" name="cake" value="8 inch cake-$66">
+                                        <label for="8inch">8 inch cake-$66</label>
+                                </div>
+                                <div id="whitemouse" style="width: 400px;
+                                height: 400px;">
+                                    <img src="img/whitemousecake.jpeg" alt="White Mouse Cake" style="width: 60%; margin-left: 20%;">
+                                    <h4 style="display: flex;
+                                    justify-content: center;
+                                    align-items: center;">White Mouse Cake</h4>
+                                    <h6 style="text-align: center;">Yellow Cake, filled with White
+                                        Chocolate Mousse, iced with Vanilla
+                                        Buttercream</h6>
+                                    <input type="radio" id="6inch" name="cake" value="6 inch cake-$37" style="margin-left: 35%">
+                                        <label for="6inch">6 inch cake-$37</label>
+                                </div>
+                                <div id="countyfair" style="width: 400px;
+                                height: 400px;">
+                                    <img src="img/Countyfairchocolatecake.png" alt="County Fair Chocolate Cake" style="width: 60%; margin-left: 20%;">
+                                    <h4 style="display: flex;
+                                    justify-content: center;
+                                    align-items: center;">County Fair Chocolate</h4>
+                                    <h6 style="text-align: center;">Chocolate Cake filled and iced with
+                                        Chocolate Buttercream</h6>
+                                    <input type="radio" id="6inch" name="cake" value="6 inch cake-$37" style="margin-left: 18%">
+                                        <label for="6inch">6 inch cake-$37</label>
+                                    <input type="radio" id="8inch" name="cake" value="8 inch cake-$61">
+                                        <label for="8inch">8 inch cake-$61</label>
+
+                                </div>
+                                <div id="birthdaycake" style="width: 400px;
+                                height: 400px;">
+                                    <img src="img/Birthdaycake copy.png" alt="Birthday Cake" style="width: 60%; margin-left: 20%;">
+                                    <h4 style="display: flex;
+                                    justify-content: center;
+                                    align-items: center;">Birthday Cake</h4>
+                                    <h6 style="text-align: center;">Yellow Cake, filled with
+                                        White Chocolate Ganache, iced with
+                                        Vanilla Buttercream and topped with
+                                        Rainbow Sprinkles</h6>
+                                    <input type="radio" id="6inch" name="cake" value="6 inch cake-$42" style="margin-left: 18%">
+                                        <label for="6inch">6 inch cake-$42</label>
+                                    <input type="radio" id="8inch" name="cake" value="8 inch cake-$66">
+                                        <label for="8inch">8 inch cake-$66</label>  
+                                </div>
+                                <div id="blackandwhite" style="width: 400px;
+                                height: 400px;">
+                                    <img src="img/blackandwhitemousecake.png" alt="Black and White Mouse Cake" style="width: 60%; margin-left: 20%;">
+                                    <h4 style="display: flex;
+                                    justify-content: center;
+                                    align-items: center;">Black and White Mouse Cake</h4>
+                                    <h6 style="text-align: center;">Chocolate Cake, filled with White
+                                        Chocolate Mousse, iced with Vanilla
+                                        Buttercream</h6>
+                                    <input type="radio" id="6inch" name="cake" value="6 inch cake-$37" style="margin-left: 35%">
+                                        <label for="6inch">6 inch cake-$37</label>
+                                </div>
+                                <div id="coconutcake" style="width: 400px;
+                                height: 400px;">
+                                    <img src="img/coconutcake.png" alt="Coconut Cake" style="width: 60%; margin-left: 20%;">
+                                    <h4 style="display: flex;
+                                    justify-content: center;
+                                    align-items: center;">Coconut Cake</h4>
+                                    <h6 style="text-align: center;">White Cake filled and iced
+                                        with Coconut Buttercream and shaved Coconut</h6>
+                                    <input type="radio" id="6inch" name="cake" value="6 inch cake-$37" style="margin-left: 18%">
+                                        <label for="6inch">6 inch cake-$37</label>
+                                    <input type="radio" id="8inch" name="cake" value="8 inch cake-$61">
+                                        <label for="8inch">8 inch cake-$61</label>
+                                </div>
+                                <div id="applewalnut" style="width: 400px;
+                                height: 400px;">
+                                    <img src="img/applewalnutcake .png" alt="Apple Walnut Cake" style="width: 60%; margin-left: 20%;">
+                                    <h4 style="display: flex;
+                                    justify-content: center;
+                                    align-items: center;">Apple Walnut Cake</h4>
+                                    <h6 style="text-align: center;">Apple Walnut Cake filled and iced with
+                                        Caramel Buttercream
+                                        Finished with Toasted Walnuts
+                                        Available whole or by the slice</h6>
+                                    <input type="radio" id="6inch" name="cake" value="6 inch cake-$42"style="margin-left: 18%">
+                                        <label for="6inch">6 inch cake-$42</label>
+                                    <input type="radio" id="8inch" name="cake" value="8 inch cake-$66">
+                                        <label for="8inch">8 inch cake-$66</label>
+                                </div>
+                                <div id="raspberrywhitemouse" style="width: 400px;
+                                height: 400px;">
+                                    <img src="img/Raspberrywhitemouse.png" alt="Raspberry White Mouse Cake" style="width: 60%; margin-left: 20%;">
+                                    <h4 style="display: flex;
+                                    justify-content: center;
+                                    align-items: center;">Raspberry White Mouse Cake</h4>
+                                    <h6 style="text-align: center;">Yellow Cake, filled with White
+                                        Chocolate Mousse and Raspberry
+                                        Preserves, iced with Vanilla
+                                        Buttercream</h6>
+                                    <input type="radio" id="6inch" name="cake" value="6 inch cake-$37" style="margin-left: 35%">
+                                        <label for="6inch">6 inch cake-$37</label>
+                                </div>
+                                <div id="momsyellow" style="width: 400px;
+                                height: 400px;">
+                                    <img src="img/momyellowcake.jpeg" alt="Mom’s Yellow Cake" style="width: 60%; margin-left: 20%;">
+                                    <h4 style="display: flex;
+                                    justify-content: center;
+                                    align-items: center;">Mom’s Yellow Cake</h4>
+                                    <h6 style="text-align: center;">Yellow Cake filled and iced with Milk
+                                        Chocolate Buttercream
+                                        Topped with Rainbow Sprinkles</h6>
+                                    <input type="radio" id="6inch" name="cake" value="6 inch cake-$37" style="margin-left: 18%">
+                                        <label for="6inch">6 inch cake-$37</label>
+                                    <input type="radio" id="8inch" name="cake" value="8 inch cake-$61">
+                                        <label for="8inch">8 inch cake-$61</label>
+                                </div>
+                                <div id="chocolatemouse" style="width: 400px;
+                                height: 400px;">
+                                    <img src="img/chocolatemousecake.png" alt="Chocolate Mouse Cake" style="width: 60%; margin-left: 20%;">
+                                    <h4 style="display: flex;
+                                    justify-content: center;
+                                    align-items: center;">Chocolate Mouse Cake</h4>
+                                    <h6 style="text-align: center;">Chocolate Cake, filled with Chocolate
+                                        Mousse, iced with Chocolate
+                                        Buttercream and finished with
+                                        Chocolate Shavings</h6>
+                                    <input type="radio" id="6inch" name="cake" value="6 inch cake-$42" style="margin-left: 18%">
+                                        <label for="6inch">6 inch cake-$42</label>
+                                    <input type="radio" id="8inch" name="cake" value="8 inch cake-$66">
+                                        <label for="8inch">8 inch cake-$66</label>
+                                </div>
+                                <div id="flourless" style="width: 400px;
+                                height: 400px;">
+                                    <img src="img/flourlesschocolatecake.jpg" alt="Flourless Chocolate Cake" style="width: 60%; margin-left: 20%;">
+                                    <h4 style="display: flex;
+                                    justify-content: center;
+                                    align-items: center;">Flourless Chocolate Cake</h4>
+                                    <h6 style="text-align: center;">The best on the North Shore!</h6>
+                                    <input type="radio" id="6inch" name="cake" value="6 inch cake-$42" style="margin-left: 18%">
+                                        <label for="6inch">6 inch cake-$42</label>
+                                    <input type="radio" id="8inch" name="cake" value="8 inch cake-$66">
+                                        <label for="8inch">8 inch cake-$66</label>
+                                </div>
+                                <div id="Dadschocolate" style="width: 400px;
+                                height: 400px;">
+                                    <img src="img/dadschocolatecake.jpeg" alt="Dad’s Chocolate Cake" style="width: 60%; margin-left: 20%;">
+                                    <h4 style="display: flex;
+                                    justify-content: center;
+                                    align-items: center;">Dad’s Chocolate Cake</h4>
+                                    <h6 style="text-align: center;">Chocolate Cake filled and iced with
+                                        Vanilla Buttercream, topped with
+                                        Rainbow Sprinkles</h6>
+                                    <input type="radio" id="6inch" name="cake" value="6 inch cake-$37" style="margin-left: 18%">
+                                        <label for="6inch">6 inch cake-$37</label>
+                                    <input type="radio" id="8inch" name="cake" value="8 inch cake-$61">
+                                        <label for="8inch">8 inch cake-$61</label>
+                                </div>
+                            </div> 
+                            <div id="standardsubmit"> 
+                                <input type="submit" value="Submit">
+                            </div>   
+                        </form>
+                    </div>
+                    <div id="customcakesform">
+                        <div id="customcakestitle">
+                            <h2>Custom Cakes</h2>
+                            <p>*denotes extra charge</p>
+                        </div>
+                        <div id="customcakesformsquares">
+                            
+                            <form action="#formtarget" method="get">
+                                <h3>Cake Flavors</h3>
+                                        <div id="cakeflavors">
+                                            <div id="col1">
+                                                <ul>
+                                                    <li>
+                                                        <input type="radio" id="chocolate" name="custom" value="Chocolate">
+                                                            <label for="chocolate" >Chocolate</label>
+                                                    </li>
+                                                    <li>
+                                                        <input type="radio" id="yellow" name="custom" value="Yellow">
+                                                            <label for="yellow">Yellow</label>
+                                                    </li>
+                                                    <li>
+                                                        <input type="radio" id="white" name="custom" value="White">
+                                                            <label for="white">White</label>
+                                                    </li>
+                                                    <li>
+                                                        <input type="radio" id="bananacuscake" name="custom" value="Banana*">
+                                                            <label for="bananacuscake">Banana*</label>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div id="col2">
+                                                <ul>
+                                                    <li>
+                                                        <input type="radio" id="carrotnuts" name="custom" value="Carrot*(contains nuts)">
+                                                            <label for="carrotnuts">Carrot*(contains nuts)</label>
+                                                    </li>
+                                                    <li>
+                                                        <input type="radio" id="espresso" name="custom" value="Espresso*">
+                                                            <label for="espresso">Espresso*</label>
+                                                    </li>
+                                                    <li>
+                                                        <input type="radio" id="caramel" name="custom" value="Caramel*">
+                                                            <label for="caramel">Caramel*</label>
+                                                    </li>
+                                                    <li>
+                                                        <input type="radio" id="vanillabutter" name="custom" value="Vanilla Buttermilk*">
+                                                            <label for="vanillabutter">Vanilla Buttermilk*</label>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div id="col3">
+                                                <ul>
+                                                <li>
+                                                    <input type="radio" id="lemonbutter" name="custom" value="Lemon Buttermilk*">
+                                                        <label for="lemonbutter">Lemon Buttermilk*</label>
+                                                </li>
+                                                <li>
+                                                    <input type="radio" id="coconut" name="custom" value="Coconut*">
+                                                        <label for="coconut">Coconut*</label>
+                                                </li>
+                                                <li>
+                                                    <input type="radio" id="triplechocolate" name="custom" value="Triple Chocolate*">
+                                                        <label for="triplechocolate">Triple Chocolate*</label>
+                                                </li>
+                                                <li>
+                                                    <input type="radio" id="redvelvet" name="custom" value="Red Velvet(contains almond extract)">
+                                                        <label for="">Red Velvet(contains almond extract)</label>
+                                                </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                   
+                    
+                                <h3>Gluten Free Cake Flavors</h3>
+                                <div id="glutenfreeflavors">
+                                    <div id="col1">
+                                        <ul>
+                                            <li>
+                                                <input type="radio" id="chocolatezucchini" name="custom" value="Chocolate Zucchini*">
+                                                    <label for="chocolatezucchini">Chocolate Zucchini*</label>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div id="col2">
+                                        <ul>
+                                            <li>
+                                                <input type="radio" id="bananagluten" name="custom" value="Banana*">
+                                                    <label for="bananagluten">Banana*</label>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div id="col3">
+                                        <ul>
+                                            <li>
+                                                <input type="radio" id="carrotgluten" name="custom" value="Carrot*(contains nuts)">
+                                                    <label for="carrotgluten">Carrot*(contains nuts)</label>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <h3>Fillings</h3>
+                                <div id="fillings">
+                                    <div id="col1">
+                                        <ul>
+                                            <li>
+                                                <input type="radio" id="preserves" name="customfill" value="Preserves">
+                                                <label for="preserves">Preserves</label>
+                                                <select id="preserves" name="preserves">
+                                                    <option value="0">Select One</option>
+                                                    <option value="1">Apricot</option>
+                                                    <option value="2">Raspberry</option>
+                                                    <option value="3">Strawberry</option>
+                                                </select>
+                                            </li>
+                                            <li>
+                                                <input type="radio" id="buttercream" name="customfill" value="Buttercream">
+                                                    <label for="buttercream">Buttercream</label>
+                                                        <select id="buttercream" name="buttercream">
+                                                            <option value="0">Select One</option>
+                                                            <option value="1">Vanilla</option>
+                                                            <option value="2">Chocolate</option>
+                                                            <option value="3">Mocha</option>
+                                                            <option value="4">Shaved Chocolate</option>
+                                                            <option value="5">Lemon</option>
+                                                            <option value="6">Caramel</option>
+                                                            <option value="7">White Chocolate</option>
+                                                            <option value="8">Milk Chocolate</option>
+                                                            <option value="9">Oreo®*</option>
+                                                        </select>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div id="col2">
+                                        <ul>
+                                            <li>
+                                                <input type="radio" id="creams" name="customfill" value="Creams">
+                                                    <label for="">Creams</label>
+                                                        <select id="creams" name="creams">
+                                                            <option value="0">Select One</option>
+                                                            <option value="1">White Whipped Cream</option>
+                                                            <option value="2">Chocolate Whipped Cream</option>
+                                                            <option value="3">Mocha Whipped Cream</option>
+                                                        </select>
+                                            </li>
+                                            <li>
+                                                <input type="radio" id="ganache" name="customfill" value="Ganache">
+                                                    <label for="ganache">Ganache</label>
+                                                        <select id="ganache" name="ganache">
+                                                                <option value="0">Select One</option>
+                                                                <option value="1">Chocolate Ganache</option>
+                                                                <option value="2">White Chocolate Ganache</option>
+                                                                <option value="3">Milk Chocolate Ganache</option>
+                                                        </select>
+                                            </li>
+                                        </ul>
+                                    </div> 
+                                    <div id="col3">
+                                        <ul> 
+                                            <li>
+                                                <input type="radio" id="freshfruit" name="customfill" value="Fresh Fruit">
+                                                    <label for="">Fresh Fruit</label>
+                                                        <select id="freshfruit" name="freshfruit">
+                                                            <option value="0">Select One</option>
+                                                            <option value="1">Strawberry*</option>
+                                                            <option value="2">Banana*</option>
+                                                            <option value="3">Raspberry*</option>
+                                                        </select>
+                                            </li>
+                                            <li>
+                                                <input type="radio" id="mousesspecial" name="customfill" value="Mouses & Special Fillings">
+                                                    <label for="mousesspecial">Mouses & Special Fillings</label>
+                                                        <select id="mousesspecial" name="mousesspecial">
+                                                                <option value="0">Select One</option>
+                                                                <option value="1">White Chocolate Mousse</option>
+                                                                <option value="2">Chocolate Mousse</option>
+                                                                <option value="3">Mocha Mousse</option>
+                                                                <option value="4">Lemon Mousse</option>
+                                                                <option value="5">Pastry Cream</option>
+                                                                <option value="6">German Chocolate*</option>
+                                                                <option value="7">Cream Cheese Buttercream</option>
+                                                        </select>
+                                            </li>
+                                        </ul>
+                                    </div> 
+
+                                </div>
+                                <h3>Icings</h3>
+                                <div id="icings">
+                                    <div id="col1">
+                                        <ul>
+                                            <li>
+                                                <input type="radio" id="buttercreams" name="customicing" value="Buttercreams">
+                                                    <label for="buttercreams">Buttercreams</label>
+                                                        <select id="buttercreams" name="buttercreams">
+                                                                <option value="0">Select One</option>
+                                                                <option value="1">Vanilla</option>
+                                                                <option value="2">Chocolate</option>
+                                                                <option value="3">Mocha</option>
+                                                                <option value="4">Orange</option>
+                                                                <option value="5">Lemon</option>
+                                                                <option value="6">Caramel</option>
+                                                                <option value="7">Coconut</option>
+                                                                <option value="8">White Chocolate</option>
+                                                                <option value="9">Milk Chocolate</option>
+                                                        </select>
+                                            </li>
+                                            <li>
+                                                <input type="radio" id="chocolateganache" name="customicing" value="Chocolate Ganache">
+                                                    <label for="chocolateganache">Chocolate Ganache</label>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div id= "col2">
+                                        <ul>
+                                            <li>
+                                                <input type="radio" id="whippedcream" name="customicing" value="Whipped Cream">
+                                                    <label for="whippedcream">Whipped Cream</label>
+                                            </li> 
+                                        </ul>
+                                    </div>
+                                    <div id="col3">
+                                        <ul>
+                                            <li>
+                                                <input type="radio" id="special" name="customicing" value="Special">
+                                                    <label for="special">Special</label>
+                                                    <select id="special" name="special">
+                                                            <option value="0">Select One</option>
+                                                            <option value="1">Cream Cheese Buttercream</option>
+                                                    </select>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <h3>Decorations and Finish</h3>
+                                <div id="decoandfin">
+                                    <ul>
+                                        <li>
+                                            <input type="radio" id="homestylewhole" name="customdeco" value="Homestyle Finish Textured finish on the whole cake, inscription on a white chocolate card with simple deco">
+                                                <label for="homestylewhole">Homestyle Finish <p>Textured finish on the whole cake, inscription on a white chocolate card with simple deco</p></label>
+                                        </li>
+                                        <li>
+                                            <input type="radio" id="homestylesides" name="customdeco" value="Homestyle Finish Textured finish on the sides of the cake, smooth top, inscription with simple deco ">
+                                                <label for="homestylesides">Homestyle Finish <p>Textured finish on the sides of the cake, smooth top, inscription with simple deco</p></label>
+                                        </li>
+                                        <li>
+                                            <input type="radio" id="smoothfinish" name="customdeco" value="Smooth Finish Fully decorated with floral or abstract designs">
+                                                <label for="smoothfinish">Smooth Finish <p>Fully decorated with floral or abstract designs</p></label>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div id="additionalcomments">
+                                    <label for="additional">Any Additional Comments</label>
+                                        <textarea id="additional" name="additional" rows="4" col="50"></textarea>
+                                </div>
+                                <div id="standardsubmit"> 
+                                    <input type="submit" value="Submit"> 
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <footer>
+                <div id="logo">
+                    <img src="img/Threetartslogo.png" alt="Three Tarts Logo">
+                </div>
+                <div id="footertext">
+                    <div id="generaldirections">
+                        <p>Located on Happ Road next to the Happ Inn and across from Mariano’s</p>
+                    </div>
+                    <div id="hoursandaddress">
+                        <div id="hours">
+                            <ul>
+                                <li>Monday: 8 am - 4pm </li><br>
+                                <li>Tuesday: 8 am - 4pm</li><br>
+                                <li>Wednesday: 8 am - 4pm</li><br>
+                                <li>Thursday: 8 am - 4pm</li><br>
+                                <li>Friday: 8 am - 4pm</li><br>
+                                <li>Saturday: 8 am - 4pm</li><br>
+                                <li>Sunday: Closed</li><br>
+                                <br>
+                            </ul>
+                        </div>
+                        <div id="addressandphone">
+                            <p>301 South Happ Road, Northfield IL 60093</p>
+                            <p>(847) 446-5444</p>
+                    </div>
+                    </div>
+                    <div id="instagramlink">
+                        <p>Follow Three Tarts Bakery:</p>
+                        <a href="https://www.instagram.com/threetartsbakery"><img src="img/instagram_icon.png"></a>
+                    </div>
+                </div>
+                
+
+            </footer>
+
+
+        </div>
+
+
+
+
+
+    </body>
+
+
+
+</html>
